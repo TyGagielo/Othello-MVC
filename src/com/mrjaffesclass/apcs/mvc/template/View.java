@@ -220,364 +220,364 @@ public class View extends javax.swing.JFrame implements MessageHandler {
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
-                jButton13OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
-                jButton14OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton15ActionPerformed(evt);
-                jButton15OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton16ActionPerformed(evt);
-                jButton16OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton17ActionPerformed(evt);
-                jButton17OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton18ActionPerformed(evt);
-                jButton18OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton19ActionPerformed(evt);
-                jButton19OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton20ActionPerformed(evt);
-                jButton20OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton21ActionPerformed(evt);
-                jButton21OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton22ActionPerformed(evt);
-                jButton22OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton23ActionPerformed(evt);
-                jButton23OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton24ActionPerformed(evt);
-                jButton24OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton25ActionPerformed(evt);
-                jButton25OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton26ActionPerformed(evt);
-                jButton26OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton27ActionPerformed(evt);
-                jButton27OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton28.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton28ActionPerformed(evt);
-                jButton28OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton29ActionPerformed(evt);
-                jButton29OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton30ActionPerformed(evt);
-                jButton30OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton31ActionPerformed(evt);
-                jButton31OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton32ActionPerformed(evt);
-                jButton32OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton33ActionPerformed(evt);
-                jButton33OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton34ActionPerformed(evt);
-                jButton34OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton35ActionPerformed(evt);
-                jButton35OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton36.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton36ActionPerformed(evt);
-                jButton36OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton37.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton37ActionPerformed(evt);
-                jButton37OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton38.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton38ActionPerformed(evt);
-                jButton38OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton39.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton39ActionPerformed(evt);
-                jButton39OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton40.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton40ActionPerformed(evt);
-                jButton40OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton41.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton41ActionPerformed(evt);
-                jButton41OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton42.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton42ActionPerformed(evt);
-                jButton42OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton43.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton43ActionPerformed(evt);
-                jButton43OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton44ActionPerformed(evt);
-                jButton44OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton45.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton45ActionPerformed(evt);
-                jButton45OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton46.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton46ActionPerformed(evt);
-                jButton46OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton47.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton47ActionPerformed(evt);
-                jButton47OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton48.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton48ActionPerformed(evt);
-                jButton48OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton49.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton49ActionPerformed(evt);
-                jButton49OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton50.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton50ActionPerformed(evt);
-                jButton50OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton51.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton51ActionPerformed(evt);
-                jButton51OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton52.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton52ActionPerformed(evt);
-                jButton52OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton53.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton53ActionPerformed(evt);
-                jButton53OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton54.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton54ActionPerformed(evt);
-                jButton54OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton55ActionPerformed(evt);
-                jButton55OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton56.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton56ActionPerformed(evt);
-                jButton56OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton57.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton57ActionPerformed(evt);
-                jButton57OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton58.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton58ActionPerformed(evt);
-                jButton58OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton59.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton59ActionPerformed(evt);
-                jButton59OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton60.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton60ActionPerformed(evt);
-                jButton60OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton61.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton61ActionPerformed(evt);
-                jButton61OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton62.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton62ActionPerformed(evt);
-                jButton62OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton63.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton63ActionPerformed(evt);
-                jButton63OnClick(evt);
+                OnClick(evt);
             }
         });
 
         jButton64.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton64ActionPerformed(evt);
-                jButton64OnClick(evt);
+                OnClick(evt);
             }
         });
 
@@ -866,417 +866,209 @@ public class View extends javax.swing.JFrame implements MessageHandler {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton13ActionPerformed
 
-    private void jButton13OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13OnClick
-
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton14ActionPerformed
-
-    private void jButton14OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14OnClick
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton15ActionPerformed
 
-    private void jButton15OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton15OnClick
-
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton16ActionPerformed
-
-    private void jButton16OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16OnClick
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton17ActionPerformed
 
-    private void jButton17OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton17OnClick
-
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton18ActionPerformed
-
-    private void jButton18OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton18OnClick
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton19ActionPerformed
 
-    private void jButton19OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton19OnClick
-
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton20ActionPerformed
-
-    private void jButton20OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton20OnClick
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton21ActionPerformed
 
-    private void jButton21OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton21OnClick
-
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton22ActionPerformed
-
-    private void jButton22OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton22OnClick
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton23ActionPerformed
 
-    private void jButton23OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton23OnClick
-
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton24ActionPerformed
-
-    private void jButton24OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton24OnClick
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton25ActionPerformed
 
-    private void jButton25OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton25OnClick
-
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton26ActionPerformed
-
-    private void jButton26OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton26OnClick
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton27ActionPerformed
 
-    private void jButton27OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton27OnClick
-
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton28ActionPerformed
-
-    private void jButton28OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton28OnClick
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton29ActionPerformed
 
-    private void jButton29OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton29OnClick
-
     private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton30ActionPerformed
-
-    private void jButton30OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton30OnClick
 
     private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton31ActionPerformed
 
-    private void jButton31OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton31OnClick
-
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton32ActionPerformed
-
-    private void jButton32OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton32OnClick
 
     private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton33ActionPerformed
 
-    private void jButton33OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton33OnClick
-
     private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton34ActionPerformed
-
-    private void jButton34OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton34OnClick
 
     private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton35ActionPerformed
 
-    private void jButton35OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton35OnClick
-
     private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton36ActionPerformed
-
-    private void jButton36OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton36OnClick
 
     private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton37ActionPerformed
 
-    private void jButton37OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton37OnClick
-
     private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton38ActionPerformed
-
-    private void jButton38OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton38OnClick
 
     private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton39ActionPerformed
 
-    private void jButton39OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton39OnClick
-
     private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton40ActionPerformed
-
-    private void jButton40OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton40OnClick
 
     private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton41ActionPerformed
 
-    private void jButton41OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton41OnClick
-
     private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton42ActionPerformed
-
-    private void jButton42OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton42OnClick
 
     private void jButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton43ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton43ActionPerformed
 
-    private void jButton43OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton43OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton43OnClick
-
     private void jButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton44ActionPerformed
-
-    private void jButton44OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton44OnClick
 
     private void jButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton45ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton45ActionPerformed
 
-    private void jButton45OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton45OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton45OnClick
-
     private void jButton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton46ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton46ActionPerformed
-
-    private void jButton46OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton46OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton46OnClick
 
     private void jButton47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton47ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton47ActionPerformed
 
-    private void jButton47OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton47OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton47OnClick
-
     private void jButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton48ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton48ActionPerformed
-
-    private void jButton48OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton48OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton48OnClick
 
     private void jButton49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton49ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton49ActionPerformed
 
-    private void jButton49OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton49OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton49OnClick
-
     private void jButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton50ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton50ActionPerformed
-
-    private void jButton50OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton50OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton50OnClick
 
     private void jButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton51ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton51ActionPerformed
 
-    private void jButton51OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton51OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton51OnClick
-
     private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton52ActionPerformed
-
-    private void jButton52OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton52OnClick
 
     private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton53ActionPerformed
 
-    private void jButton53OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton53OnClick
-
     private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton54ActionPerformed
-
-    private void jButton54OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton54OnClick
 
     private void jButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton55ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton55ActionPerformed
 
-    private void jButton55OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton55OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton55OnClick
-
     private void jButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton56ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton56ActionPerformed
-
-    private void jButton56OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton56OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton56OnClick
 
     private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton57ActionPerformed
 
-    private void jButton57OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton57OnClick
-
     private void jButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton58ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton58ActionPerformed
-
-    private void jButton58OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton58OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton58OnClick
 
     private void jButton59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton59ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton59ActionPerformed
 
-    private void jButton59OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton59OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton59OnClick
-
     private void jButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton60ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton60ActionPerformed
-
-    private void jButton60OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton60OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton60OnClick
 
     private void jButton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton61ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton61ActionPerformed
 
-    private void jButton61OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton61OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton61OnClick
-
     private void jButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton62ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton62ActionPerformed
-
-    private void jButton62OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton62OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton62OnClick
 
     private void jButton63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton63ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton63ActionPerformed
 
-    private void jButton63OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton63OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton63OnClick
-
     private void jButton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton64ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton64ActionPerformed
-
-    private void jButton64OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton64OnClick
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton64OnClick
 
   /**
    * @param args the command line arguments
