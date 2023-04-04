@@ -335,41 +335,65 @@
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton9">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="10" noResource="true"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton9ActionPerformed,OnClick"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton10">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="11" noResource="true"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton10ActionPerformed,OnClick"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton11">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="12" noResource="true"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton11ActionPerformed,OnClick"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton12">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="13" noResource="true"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed,OnClick"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton13">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="14" noResource="true"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton13ActionPerformed,OnClick"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton14">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="15" noResource="true"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton14ActionPerformed,OnClick"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton15">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="16" noResource="true"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton15ActionPerformed,OnClick"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton16">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="17" noResource="true"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton16ActionPerformed,OnClick"/>
       </Events>
