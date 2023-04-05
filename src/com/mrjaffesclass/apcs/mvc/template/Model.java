@@ -47,7 +47,7 @@ public class Model implements MessageHandler {
   private void newGame() {
     for(int row=0; row<this.board.length; row++) {
       for (int col=0; col<this.board[0].length; col++) {
-        this.board[row][col] = "";
+        this.board[row][col] = "--";
       }
     }
     this.whoseMove = false;
@@ -71,7 +71,7 @@ public class Model implements MessageHandler {
       Integer row = Integer.valueOf(position.substring(0,1));
       Integer col = Integer.valueOf(position.substring(1,2));
       // If square is blank...
-      if (this.board[row][col].equals("")) {
+      if (this.board[row][col].equals("--")) {
         // ... then set X or O depending on whose move it is
         if (this.whoseMove) {
           this.board[row][col] = "X";
