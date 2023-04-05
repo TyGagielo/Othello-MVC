@@ -121,15 +121,11 @@ public class View extends javax.swing.JFrame implements MessageHandler {
       // know that the model is sending out the board data with the message
       String[][] board = (String[][])messagePayload;
       // Now set the button text with the contents of the board
-      jButton1.setText(board[0][0]);
-      jButton2.setText(board[0][1]);
-      jButton3.setText(board[0][2]);
-      jButton4.setText(board[1][0]);
-      jButton5.setText(board[1][1]);
-      jButton6.setText(board[1][2]);
-      jButton7.setText(board[2][0]);
-      jButton8.setText(board[2][1]);
-      jButton9.setText(board[2][2]);
+      for (int i = 0; i < 8; i++){
+          for (int j = 0; j < 8; j++){
+              this.seenButtons[i][j].setText(board[i][j]);
+          }
+      }
     }
   }
 

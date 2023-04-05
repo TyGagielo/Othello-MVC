@@ -47,7 +47,7 @@ public class Model implements MessageHandler {
   private void newGame() {
     for(int row=0; row<this.board.length; row++) {
       for (int col=0; col<this.board[0].length; col++) {
-        this.board[row][col] = "i";
+        this.board[row][col] = "";
       }
     }
     this.whoseMove = false;
