@@ -36,6 +36,7 @@ public class Model implements MessageHandler {
     this.newGame();
     this.mvcMessaging.subscribe("playerMove", this);
     this.mvcMessaging.subscribe("newGame", this);
+    this.mvcMessaging.notify("boardChange", this.board);
   }
   
   public void callNewGame(){
