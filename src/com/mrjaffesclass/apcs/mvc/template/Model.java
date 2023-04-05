@@ -45,9 +45,27 @@ public class Model implements MessageHandler {
    * Reset the state for a new game
    */
   private void newGame() {
+      boolean xoro = true;
+      
     for(int row=0; row<this.board.length; row++) {
       for (int col=0; col<this.board[0].length; col++) {
         this.board[row][col] = "--";
+        
+        for (int i = 0; i < 2; i++){
+            
+            for (int j = 0; j < 2; j++){
+                
+                if (row == i+3 && col == j+3){
+                  if (xoro == true){
+                      this.board[row][col] = "X";
+                  } else{
+                      this.board[row][col] = "O";
+                  }
+                  xoro = !xoro;
+                }
+            }
+            xoro = !xoro;
+        }
       }
     }
     this.whoseMove = false;
