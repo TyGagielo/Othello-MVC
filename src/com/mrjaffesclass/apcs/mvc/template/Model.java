@@ -74,7 +74,40 @@ public class Model implements MessageHandler {
   }
 
   private void flipPieces(){
+      for (int i = 0; i < this.board.length; i++){
+          for (int j = 0; j < 8; j++){
+              
+              if (this.board[i][j].equals("X")){
+                  checkX(i, j);
+              }
+          }
+      }
+  }
+  
+  private void checkX(int rstart, int cstart){
+      boolean isChecking = true;
+      int row = rstart+1;
+      int col = cstart+1;
+      int backstep = 0;
       
+      while(isChecking && row < this.board.length && col <this.board.length){
+          if(this.board[row][col].equals("--")){
+              backstep = 0;
+              isChecking = false;
+          } else if (this.board[row][col].equals("X")){
+              isChecking = false;
+          } else if (!this.board[row+1][col+1].equals(this.board[row+1][col+1])){
+              row++;
+              col++;
+              backstep++;
+          }
+      }
+      
+      for (int i = backstep; i < 0; i--){
+          this.board[row][col] = "X";
+          row--;
+          col--;
+      }
   }
   
   @Override
