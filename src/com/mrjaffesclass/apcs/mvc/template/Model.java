@@ -73,6 +73,9 @@ public class Model implements MessageHandler {
     this.gameOver = false;
   }
 
+  private void flipPieces(){
+      
+  }
   
   @Override
   public void messageHandler(String messageName, Object messagePayload) {
@@ -97,6 +100,9 @@ public class Model implements MessageHandler {
         } else {
           this.board[row][col] = "O";
         }
+        
+        flipPieces();
+        
         whoseMove = !this.whoseMove;
         // Send the boardChange message along with the new board 
         this.mvcMessaging.notify("boardChange", this.board);
