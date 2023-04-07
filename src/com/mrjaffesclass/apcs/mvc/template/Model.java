@@ -73,10 +73,18 @@ public class Model implements MessageHandler {
     this.gameOver = false;
   }
 
-  private void flipPieces(int direction, String color){
+  private int flipPieces(int direction, String color, int row, int col){
+      int firstRow = row;
+      int firstCol = col;
+      
       if (direction == 0){
+          if (!board[row][col].equals(Constants.BLANK)){
+              return flipPieces(direction+1, color, firstRow, firstCol);
+          }
           
-          
+          if (!board[row][col].equals(board[row+1][col])){
+              
+          }
           
       }
   }
@@ -105,7 +113,7 @@ public class Model implements MessageHandler {
           this.board[row][col] = Constants.BLACK;
         }
         
-        flipPieces(0, Constants.WHITE);
+        flipPieces(0, Constants.WHITE, row, col);
         
         whoseMove = !this.whoseMove;
         // Send the boardChange message along with the new board 
