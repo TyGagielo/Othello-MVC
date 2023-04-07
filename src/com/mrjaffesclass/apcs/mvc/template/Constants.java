@@ -12,9 +12,7 @@ package com.mrjaffesclass.apcs.mvc.template;
  */
 public class Constants {
     // Constants
-  public static final int UP = 1;
-  public static final int DOWN = -1;
-  
-  public static final int FIELD_1_INCREMENT = 1;
-  public static final int FIELD_2_INCREMENT = 1;
+  public static final String WHITE = "O";
+  public static final String BLACK = "0";
+  public static final String BLANK = "--";
 }

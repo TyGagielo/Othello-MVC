@@ -50,7 +50,7 @@ public class Model implements MessageHandler {
       
     for(int row=0; row<this.board.length; row++) {
       for (int col=0; col<this.board[0].length; col++) {
-        this.board[row][col] = "--";
+        this.board[row][col] = Constants.BLANK;
         
         for (int i = 0; i < 2; i++){
             
@@ -58,9 +58,9 @@ public class Model implements MessageHandler {
                 
                 if (row == i+3 && col == j+3){
                   if (xoro == true){
-                      this.board[row][col] = "X";
+                      this.board[row][col] = Constants.WHITE;
                   } else{
-                      this.board[row][col] = "O";
+                      this.board[row][col] = Constants.BLACK;
                   }
                   xoro = !xoro;
                 }
@@ -73,40 +73,11 @@ public class Model implements MessageHandler {
     this.gameOver = false;
   }
 
-  private void flipPieces(){
-      for (int i = 0; i < this.board.length; i++){
-          for (int j = 0; j < 8; j++){
-              
-              if (this.board[i][j].equals("X")){
-                  checkX(i, j);
-              }
-          }
-      }
-  }
-  
-  private void checkX(int rstart, int cstart){
-      boolean isChecking = true;
-      int row = rstart+1;
-      int col = cstart+1;
-      int backstep = 0;
-      
-      while(isChecking && row < this.board.length && col <this.board.length){
-          if(this.board[row][col].equals("--")){
-              backstep = 0;
-              isChecking = false;
-          } else if (this.board[row][col].equals("X")){
-              isChecking = false;
-          } else if (!this.board[row+1][col+1].equals(this.board[row+1][col+1])){
-              row++;
-              col++;
-              backstep++;
-          }
-      }
-      
-      for (int i = backstep; i < 0; i--){
-          this.board[row][col] = "X";
-          row--;
-          col--;
+  private void flipPieces(int direction, String color){
+      if (direction == 0){
+          
+          
+          
       }
   }
   
@@ -126,15 +97,15 @@ public class Model implements MessageHandler {
       Integer row = Integer.valueOf(position.substring(0,1));
       Integer col = Integer.valueOf(position.substring(1,2));
       // If square is blank...
-      if (this.board[row][col].equals("--")) {
+      if (this.board[row][col].equals(Constants.BLANK)) {
         // ... then set X or O depending on whose move it is
         if (this.whoseMove) {
-          this.board[row][col] = "X";
+          this.board[row][col] = Constants.WHITE;
         } else {
-          this.board[row][col] = "O";
+          this.board[row][col] = Constants.BLACK;
         }
         
-        flipPieces();
+        flipPieces(0, Constants.WHITE);
         
         whoseMove = !this.whoseMove;
         // Send the boardChange message along with the new board 
