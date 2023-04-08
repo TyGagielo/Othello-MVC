@@ -80,16 +80,16 @@ public class Model implements MessageHandler {
       if (direction > 8){return 0;}
       
       while (direction == 0){
-          if (board[row][col+1].equals(Constants.BLANK)){
+          if (board[row][col+1].equals(Constants.BLANK) && row < 7){
               for (int i = col; i > firstCol; i--){
                   board[firstRow][i] = oppColor;
               }
               return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
           }
-          if (board[row][col].equals(board[row][col+1])){
+          if (board[row][col].equals(board[row][col+1]) && row < 7){
               return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
           } 
-          if (!board[row][col].equals(board[row][col+1]) && row < 8){
+          if (!board[row][col].equals(board[row][col+1]) && row < 7){
               col++;
               board[row][col] = color;
           }
