@@ -73,20 +73,29 @@ public class Model implements MessageHandler {
     this.gameOver = false;
   }
 
-  private int flipPieces(int direction, String color, int row, int col){
+  private int flipPieces(int direction, String color, String oppColor, int row, int col){
       int firstRow = row;
       int firstCol = col;
       
-      if (direction == 0){
-          if (!board[row][col].equals(Constants.BLANK)){
-              return flipPieces(direction+1, color, firstRow, firstCol);
+      if (direction > 8){return 0;}
+      
+      while (direction == 0){
+          if (board[row][col+1].equals(Constants.BLANK)){
+              for (int i = col; i > firstCol; i--){
+                  board[firstRow][i] = oppColor;
+              }
+              return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
           }
-          
-          if (!board[row][col].equals(board[row+1][col])){
-              
+          if (board[row][col].equals(board[row][col+1])){
+              return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
+          } 
+          if (!board[row][col].equals(board[row][col+1]) && row < 8){
+              col++;
+              board[row][col] = color;
           }
-          
       }
+      
+      return 1;
   }
   
   @Override
@@ -109,11 +118,13 @@ public class Model implements MessageHandler {
         // ... then set X or O depending on whose move it is
         if (this.whoseMove) {
           this.board[row][col] = Constants.WHITE;
+          flipPieces(0, Constants.WHITE, Constants.BLACK, row, col);
         } else {
           this.board[row][col] = Constants.BLACK;
+          flipPieces(0, Constants.BLACK, Constants.WHITE, row, col);
         }
         
-        flipPieces(0, Constants.WHITE, row, col);
+        
         
         whoseMove = !this.whoseMove;
         // Send the boardChange message along with the new board 
