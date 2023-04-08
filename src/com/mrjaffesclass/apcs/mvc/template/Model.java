@@ -79,18 +79,53 @@ public class Model implements MessageHandler {
       
       if (direction > 8){return 0;}
       
+      //flip to the right
       while (direction == 0){
-          if (board[row][col+1].equals(Constants.BLANK) && row < 7){
+          if (board[row][col+1].equals(Constants.BLANK) && col < 7){
               for (int i = col; i > firstCol; i--){
                   board[firstRow][i] = oppColor;
               }
               return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
           }
-          if (board[row][col].equals(board[row][col+1]) && row < 7){
+          if (board[row][col].equals(board[row][col+1]) && col < 7){
               return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
           } 
-          if (!board[row][col].equals(board[row][col+1]) && row < 7){
+          if (!board[row][col].equals(board[row][col+1]) && col < 7){
               col++;
+              board[row][col] = color;
+          }
+      }
+      
+      //flip to the left
+      while (direction == 1){
+          if (board[row][col-1].equals(Constants.BLANK) && col > 0){
+              for (int i = col; i > firstCol; i++){
+                  board[firstRow][i] = oppColor;
+              }
+              return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
+          }
+          if (board[row][col].equals(board[row][col-1]) && col > 0){
+              return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
+          } 
+          if (!board[row][col].equals(board[row][col-1]) && col > 0){
+              col--;
+              board[row][col] = color;
+          }
+      }
+      
+      //flip up
+      while (direction == 2){
+          if (board[row-1][col].equals(Constants.BLANK) && row > 0){
+              for (int i = col; i > firstCol; i++){
+                  board[i][firstCol] = oppColor;
+              }
+              return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
+          }
+          if (board[row][col].equals(board[row-1][col]) && row > 0){
+              return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
+          } 
+          if (!board[row][col].equals(board[row-1][col]) && row > 0){
+              row--;
               board[row][col] = color;
           }
       }
