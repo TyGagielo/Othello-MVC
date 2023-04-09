@@ -289,6 +289,28 @@ public class Model implements MessageHandler {
     return false;
   }
   
+   private boolean boardFull(){
+       for(String[] i : this.board){
+           for (String s : i){
+               if(s.equals(Constants.BLANK)){return false;}
+           }
+       }
+       return true;
+   }
+   private String findWinner(){
+       int b = 0; int w = 0;
+       for(String[] i : this.board){
+           for (String s : i){
+               b += (s.equals(Constants.BLACK)) ? 1:0;
+               w += (s.equals(Constants.WHITE)) ? 1:0;
+           }
+       }
+       
+       if (b>w){return "BLACk WINS";} 
+       else if (b == w){return "TIE";}
+       else {return "WHITE WINS";}
+   }
+   
   @Override
   public void messageHandler(String messageName, Object messagePayload) {
       // Display the message to the console for debugging
@@ -325,6 +347,12 @@ public class Model implements MessageHandler {
       this.newGame();
       // Send the boardChange message along with the new board 
       this.mvcMessaging.notify("boardChange", this.board);
+    }
+    
+    if (boardFull()){
+          this.gameOver = true;
+          System.out.println(findWinner());
+          this.mvcMessaging.notify("gameOver", this.gameOver);
     }
   }
 }
