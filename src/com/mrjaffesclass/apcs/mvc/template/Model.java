@@ -363,8 +363,7 @@ public class Model implements MessageHandler {
     
     if (boardFull()){
           this.gameOver = true;
-          System.out.println(findWinner());
-          this.mvcMessaging.notify("gameOver", this.gameOver);
+          this.mvcMessaging.notify("gameOver", findWinner());
     }
   }
 }
