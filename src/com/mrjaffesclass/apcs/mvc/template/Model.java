@@ -100,6 +100,8 @@ public class Model implements MessageHandler {
       }
       direction = (direction == 0) ? 1 : direction;
       
+      row = firstRow;
+      col = firstCol;
       //flip to the left
       while (direction == 1 && col > 0 && !shouldntFlip(direction, firstRow, firstCol)){
           if (board[row][col-1].equals(Constants.BLANK)){
@@ -120,6 +122,8 @@ public class Model implements MessageHandler {
       }
       direction = (direction == 1) ? 2 : direction;
       
+      row = firstRow;
+      col = firstCol;
       //flip up
       while (direction == 2 && row > 0 && !shouldntFlip(direction, firstRow, firstCol)){
           if (board[row-1][col].equals(Constants.BLANK)){
@@ -140,6 +144,8 @@ public class Model implements MessageHandler {
       }
       direction = (direction == 2) ? 3 : direction;
       
+      row = firstRow;
+      col = firstCol;
       //flip down
       while (direction == 3 && row < 7 && !shouldntFlip(direction, firstRow, firstCol)){
           if (board[row+1][col].equals(Constants.BLANK)){
@@ -186,6 +192,8 @@ public class Model implements MessageHandler {
       }
       direction = (direction == 4) ? 5 : direction;
       
+      row = firstRow;
+      col = firstCol;
       //diag down/left
       while (direction == 5 && row < 7 && col > 0){
           if (board[row+1][col-1].equals(Constants.BLANK) || board[7][0].equals(oppColor)){
@@ -209,6 +217,8 @@ public class Model implements MessageHandler {
       }
       direction = (direction == 5) ? 6 : direction;
       
+      row = firstRow;
+      col = firstCol;
       //diag up/left
       while (direction == 6 && row > 0 && col > 0){
           if (board[row-1][col-1].equals(Constants.BLANK) || board[0][0].equals(oppColor)){
@@ -232,6 +242,8 @@ public class Model implements MessageHandler {
       }
       direction = (direction == 6) ? 7 : direction;
       
+      row = firstRow;
+      col = firstCol;
       //diag up/right
       while (direction == 7 && row > 0 && col < 7){
           if (board[row-1][col+1].equals(Constants.BLANK) || board[0][7].equals(oppColor)){
@@ -328,7 +340,7 @@ public class Model implements MessageHandler {
       Integer col = Integer.valueOf(position.substring(1,2));
       // If square is blank...
       if (this.board[row][col].equals(Constants.BLANK)) {
-        // ... then set X or O depending on whose move it is
+        // ... then set @ or O depending on whose move it is
         if (this.whoseMove) {
           this.board[row][col] = Constants.WHITE;
           flipPieces(0, Constants.WHITE, Constants.BLACK, row, col);
@@ -343,7 +355,7 @@ public class Model implements MessageHandler {
       
     // newGame message handler
     } else if (messageName.equals("newGame")) {
-      // Reset the app state
+      // Reset the game
       this.newGame();
       // Send the boardChange message along with the new board 
       this.mvcMessaging.notify("boardChange", this.board);
