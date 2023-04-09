@@ -82,7 +82,7 @@ public class Model implements MessageHandler {
       //CARDINAL DIRECtIONS
       //flip to the right
       while (direction == 0 && col < 7){
-          if (board[row][col+1].equals(Constants.BLANK) || shouldntFlip(direction, firstRow, firstCol)){
+          if (board[row][col+1].equals(Constants.BLANK)){
               for (int i = col; i > firstCol; i--){
                   board[firstRow][i] = oppColor;
               }
@@ -102,7 +102,7 @@ public class Model implements MessageHandler {
       
       //flip to the left
       while (direction == 1 && col > 0){
-          if (board[row][col-1].equals(Constants.BLANK) || shouldntFlip(direction, firstRow, firstCol)){
+          if (board[row][col-1].equals(Constants.BLANK)){
               for (int i = col; i < firstCol; i++){
                   board[firstRow][i] = oppColor;
               }
@@ -122,7 +122,7 @@ public class Model implements MessageHandler {
       
       //flip up
       while (direction == 2 && row > 0){
-          if (board[row-1][col].equals(Constants.BLANK) || shouldntFlip(direction, firstRow, firstCol)){
+          if (board[row-1][col].equals(Constants.BLANK)){
               for (int i = row; i < firstRow; i++){
                   board[i][firstCol] = oppColor;
               }
@@ -142,7 +142,7 @@ public class Model implements MessageHandler {
       
       //flip down
       while (direction == 3 && row < 7){
-          if (board[row+1][col].equals(Constants.BLANK) || shouldntFlip(direction, firstRow, firstCol)){
+          if (board[row+1][col].equals(Constants.BLANK)){
               for (int i = row; i > firstRow; i--){
                   board[i][firstCol] = oppColor;
               }
@@ -161,7 +161,7 @@ public class Model implements MessageHandler {
       direction = (direction == 3) ? 4 : direction;
       
       //DIAGONALS
-      //diag down/down
+      //diag down/right
       while (direction == 4 && row < 7 && col < 7){
           if (board[row+1][col+1].equals(Constants.BLANK) || board[7][7].equals(oppColor)){
               int j = col;
@@ -182,42 +182,76 @@ public class Model implements MessageHandler {
               }
           }
       }
+      direction = (direction == 4) ? 5 : direction;
       
+      //diag down/left
+      while (direction == 5 && row < 7 && col > 0){
+          if (board[row+1][col-1].equals(Constants.BLANK) || board[7][0].equals(oppColor)){
+              int j = col;
+              for (int i = row; i > firstRow; i--){
+                board[i][j] = oppColor;
+                j++;
+              }
+              return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
+          }
+          if (board[row][col].equals(board[row+1][col-1]) ){
+              return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
+          } 
+          if (!board[row][col].equals(board[row+1][col-1])){
+              row++;
+              col--;
+              if (row != 7 && col != 0){
+                board[row][col] = color;
+              }
+          }
+      }
+      direction = (direction == 5) ? 6 : direction;
+      
+      //diag up/left
+      while (direction == 6 && row > 0 && col > 0){
+          if (board[row-1][col-1].equals(Constants.BLANK) || board[0][0].equals(oppColor)){
+              int j = col;
+              for (int i = row; i < firstRow; i++){
+                board[i][j] = oppColor;
+                j++;
+              }
+              return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
+          }
+          if (board[row][col].equals(board[row-1][col-1]) ){
+              return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
+          } 
+          if (!board[row][col].equals(board[row-1][col-1])){
+              row--;
+              col--;
+              if (row != 7 && col != 0){
+                board[row][col] = color;
+              }
+          }
+      }
+      direction = (direction == 6) ? 7 : direction;
+      
+      //diag up/right
+      while (direction == 7 && row > 0 && col < 7){
+          if (board[row-1][col+1].equals(Constants.BLANK)){
+              int j = col;
+              for (int i = row; i < firstRow; i++){
+                board[i][j] = oppColor;
+                j--;
+              }
+              return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
+          }
+          if (board[row][col].equals(board[row-1][col+1]) ){
+              return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
+          } 
+          if (!board[row][col].equals(board[row-1][col+1])){
+              row--;
+              col++;
+              if (row != 7 && col != 0){
+                board[row][col] = color;
+              }
+          }
+      }
       return 1;
-  }
-  
-  private boolean shouldntFlip(int dir, int firstRow, int firstCol){
-      int count;
-      //right
-      if (dir == 0){
-          for (int i = 7; i > firstCol; --i){
-              count = (board[firstRow][i].equals(board[firstRow][7])) ? count+1 : count;
-          }
-          if (count == 7-firstCol){return true;}
-      }
-      //left
-      if (dir == 1){
-          for (int i = 0; i < firstCol; ++i){
-              count = (board[firstRow][i].equals(board[firstRow][0])) ? count+1 : count;
-          }
-          if (count == firstCol){return true;}
-      }
-      //up
-      if (dir == 2){
-          for (int i = 0; i < firstRow; ++i){
-              count = (board[i][firstCol].equals(board[0][firstCol])) ? count+1 : count;
-          }
-          if (count == firstRow){return true;}
-      }
-      //down
-      if (dir == 3){
-          for (int i = 7; i > firstRow; --i){
-              count = (board[i][firstCol].equals(board[7][firstCol])) ? count+1 : count;
-          }
-          if (count == 7-firstRow){return true;}
-      }
-    
-    return false;
   }
   
   @Override
