@@ -234,7 +234,7 @@ public class Model implements MessageHandler {
       
       //diag up/right
       while (direction == 7 && row > 0 && col < 7){
-          if (board[row-1][col+1].equals(Constants.BLANK)){
+          if (board[row-1][col+1].equals(Constants.BLANK) || board[0][7].equals(oppColor)){
               int j = col;
               for (int i = row; i < firstRow; i++){
                 board[i][j] = oppColor;
@@ -286,7 +286,6 @@ public class Model implements MessageHandler {
           }
           if (count == 7-firstRow){return true;}
       }
-
     return false;
   }
   
