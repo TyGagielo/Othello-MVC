@@ -114,7 +114,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
       System.out.println("MSG: received by view: "+messageName+" | No data sent");
     }
     if (messageName.equals("gameOver")){
-        //set gameOver equal to true
+        jLabel1.setText(messagePayload.toString());
     }
     if (messageName.equals("boardChange")) {
       // Get the message payload and cast it as a 2D string array since we
