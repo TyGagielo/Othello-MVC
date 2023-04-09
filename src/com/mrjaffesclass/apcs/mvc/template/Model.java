@@ -167,7 +167,7 @@ public class Model implements MessageHandler {
       while (direction == 4 && row < 7 && col < 7){
           if (board[row+1][col+1].equals(Constants.BLANK) || board[7][7].equals(oppColor)){
               int j = col;
-              for (int i = row; i > firstRow; i--){
+              for (int i = row; i > firstRow && j > -1; i--){
                 board[i][j] = oppColor;
                 j--;
               }
@@ -190,7 +190,7 @@ public class Model implements MessageHandler {
       while (direction == 5 && row < 7 && col > 0){
           if (board[row+1][col-1].equals(Constants.BLANK) || board[7][0].equals(oppColor)){
               int j = col;
-              for (int i = row; i > firstRow; i--){
+              for (int i = row; i > firstRow && j < 8; i--){
                 board[i][j] = oppColor;
                 j++;
               }
@@ -213,7 +213,7 @@ public class Model implements MessageHandler {
       while (direction == 6 && row > 0 && col > 0){
           if (board[row-1][col-1].equals(Constants.BLANK) || board[0][0].equals(oppColor)){
               int j = col;
-              for (int i = row; i < firstRow; i++){
+              for (int i = row; i < firstRow && j < 8; i++){
                 board[i][j] = oppColor;
                 j++;
               }
@@ -236,7 +236,7 @@ public class Model implements MessageHandler {
       while (direction == 7 && row > 0 && col < 7){
           if (board[row-1][col+1].equals(Constants.BLANK) || board[0][7].equals(oppColor)){
               int j = col;
-              for (int i = row; i < firstRow; i++){
+              for (int i = row; i < firstRow && j > -1; i++){
                 board[i][j] = oppColor;
                 j--;
               }
