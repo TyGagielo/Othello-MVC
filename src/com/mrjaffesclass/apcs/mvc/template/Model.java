@@ -60,11 +60,6 @@ public class Model implements MessageHandler {
     this.board[4][3] = Constants.BLACK;
     this.board[4][4] = Constants.WHITE;
     
-    this.board[2][3] = Constants.LEGAL;
-    this.board[3][2] = Constants.LEGAL;
-    this.board[4][5] = Constants.LEGAL;
-    this.board[5][4] = Constants.LEGAL;
-    
     this.whoseMove = false;
     this.gameOver = false;
   }
@@ -360,167 +355,39 @@ public class Model implements MessageHandler {
        else {return "WHITE WINS";}
    }
    
-   private int findLegalMoves(int direction, String color, String oppColor, int row, int col){
-      int firstRow = row;
-      int firstCol = col;
-      
-      //CARDINAL DIRECtIONS
-      //flip to the right
-      while (direction == 0 && col < 7){
-          if (board[row][col].equals(board[row][col+1])){
-              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-          } 
-          if (!board[row][col].equals(board[row][col+1])){
-              col++;
-          }
-          if (board[row][col].equals(Constants.BLANK)){
-              board[row][col] = Constants.LEGAL;
-              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-          }
-      }
-      direction = (direction == 0) ? 1 : direction;
-      
-      row = firstRow;
-      col = firstCol;
-      //flip to the left
-      while (direction == 1 && col > 0){
-          if (board[row][col].equals(board[row][col-1])){
-              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-          } 
-          if (!board[row][col].equals(board[row][col-1])){
-              col--;
-          }
-          if (board[row][col].equals(Constants.BLANK)){
-              board[row][col] = Constants.LEGAL;
-              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-          }
-      }
-      direction = (direction == 1) ? 2 : direction;
-      
-      row = firstRow;
-      col = firstCol;
-      //flip up
-      while (direction == 2 && row > 0){
-          if (board[row][col].equals(board[row-1][col])){
-              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-          } 
-          if (!board[row][col].equals(board[row-1][col])){
-              row--;
-          }
-          if (board[row][col].equals(Constants.BLANK)){
-              board[row][col] = Constants.LEGAL;
-              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-          }
-      }
-      direction = (direction == 2) ? 3 : direction;
-      
-      row = firstRow;
-      col = firstCol;
-      //flip down
-      while (direction == 3 && row < 7){
-          if (board[row][col].equals(board[row+1][col])){
-              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-          } 
-          if (!board[row][col].equals(board[row+1][col])){
-              row++;
-          }
-          if (board[row][col].equals(Constants.BLANK)){
-              board[row][col] = Constants.LEGAL;
-              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-          }
-      }
-      direction = (direction == 3) ? 4 : direction;
-      
-      //DIAGONALS
-      row = firstRow;
-      col = firstCol;
-      //diag down/right
-      while (direction == 4 && row < 7 && col < 7){
-          if (board[row][col].equals(board[row+1][col+1])){
-              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-          } 
-          if (!board[row][col].equals(board[row+1][col+1])){
-              col++;
-              row++;
-          }
-          if (board[row][col].equals(Constants.BLANK)){
-              board[row][col] = Constants.LEGAL;
-              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-          }
-      }
-      direction = (direction == 4) ? 5 : direction;
-      
-      row = firstRow;
-      col = firstCol;
-      //diag down/left
-      while (direction == 5 && row < 7 && col > 0){
-          if (board[row][col].equals(board[row+1][col-1])){
-              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-          } 
-          if (!board[row][col].equals(board[row+1][col-1])){
-              col--;
-              row++;
-          }
-          if (board[row][col].equals(Constants.BLANK)){
-              board[row][col] = Constants.LEGAL;
-              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-          }
-      }
-      direction = (direction == 5) ? 6 : direction;
-      
-      row = firstRow;
-      col = firstCol;
-      //diag up/left
-      while (direction == 6 && row > 0 && col > 0){
-          if (board[row][col].equals(board[row-1][col-1])){
-              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-          } 
-          if (!board[row][col].equals(board[row-1][col-1])){
-              col--;
-              row--;
-          }
-          if (board[row][col].equals(Constants.BLANK)){
-              board[row][col] = Constants.LEGAL;
-              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-          }
-      }
-//      direction = (direction == 6) ? 7 : direction;
-//      
-//      row = firstRow;
-//      col = firstCol;
-//      //diag up/right
-//      while (direction == 7 && row > 0 && col < 7){
-//          if (board[row][col].equals(board[row-1][col+1])){
-//              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-//          } 
-//          if (board[row][col].equals(board[row-1][col+1])){
-//              col++;
-//              row--;
-//          }
-//          if (board[row][col].equals(Constants.BLANK)){
-//              board[row][col] = Constants.LEGAL;
-//              return findLegalMoves(direction+1, color, oppColor, firstRow, firstCol);
-//          }
-//      }
-      return 1;
-   }
+//   public void callLegalMoves(){
+//      this.mvcMessaging.notify("legalMoves", this);
+//  }
    
-   public void callLegalMoves(){
-      this.mvcMessaging.notify("legalMoves", this);
-  }
-   private void legalLoop(){
-       //find Legal Moves
-      for (int i = 0; i < this.board.length; i++){
-          for (int j = 0; j < this.board.length; j++){
-              if (board[i][j].equals(Constants.LEGAL)){board[i][j] = Constants.BLANK;}
-              if (this.whoseMove && board[i][j].equals(Constants.WHITE)){
-                  findLegalMoves(0, Constants.WHITE, Constants.BLACK, i, j);
-              }
-              if (!this.whoseMove && this.board[i][j].equals(Constants.BLACK)){
-                  findLegalMoves(0, Constants.BLACK, Constants.WHITE, i, j);
-              }
-          }
-      }
+   private boolean isLegal(String color, String oppcolor, int row, int col){
+       boolean result = false;
+       
+       if (row+1<8 && col+1<8 && board[row+1][col+1].equals(oppcolor))
+       { 
+          result=true;
+       }else if(row+1<8 && board[row+1][col].equals(oppcolor))
+       {
+         result=true;
+       }else if(col+1<8 && board[row][col+1].equals(oppcolor))
+       {
+          result=true;
+       }else if (col-1>-1 && board[row][col-1].equals(oppcolor))
+       {
+          result=true;
+       }else if (row-1>-1 && col-1>-1 && board[row-1][col-1].equals(oppcolor))
+       {
+         result=true;
+       }else if (row-1>-1 && board[row-1][col].equals(oppcolor))
+       { 
+         result=true;
+       }else if(row-1>-1 && col+1<8 && board[row-1][col+1].equals(oppcolor))
+       {
+         result=true;
+       }else if (row+1<8 && col-1>-1 && board[row+1][col-1].equals(oppcolor))
+       {
+         result = true;
+       }
+    return result;
    }
    
   @Override
@@ -533,7 +400,7 @@ public class Model implements MessageHandler {
     }
     
     if(messageName.equals("legalMoves")){
-        legalLoop();
+//        legalLoop();
         this.mvcMessaging.notify("boardChange", this.board);
     }
     
@@ -545,16 +412,17 @@ public class Model implements MessageHandler {
       Integer col = Integer.valueOf(position.substring(1,2));
       
       // If square is blank...
-      if (this.board[row][col].equals(Constants.LEGAL)) {
+      if (this.board[row][col].equals(Constants.BLANK)) {
         // ... then set @ or O depending on whose move it is
-        if (this.whoseMove) {
+        if (this.whoseMove && isLegal( Constants.WHITE, Constants.BLACK, row, col)) {
           this.board[row][col] = Constants.WHITE;
+          whoseMove = !this.whoseMove;
           flipPieces(0, Constants.WHITE, Constants.BLACK, row, col);
-        } else {
+        } else if (!this.whoseMove && isLegal( Constants.BLACK, Constants.WHITE, row, col)) {
           this.board[row][col] = Constants.BLACK;
+          whoseMove = !this.whoseMove;
           flipPieces(0, Constants.BLACK, Constants.WHITE, row, col);
         }
-        whoseMove = !this.whoseMove;
         // Send the boardChange message along with the new board 
         this.mvcMessaging.notify("boardChange", this.board);
       }
