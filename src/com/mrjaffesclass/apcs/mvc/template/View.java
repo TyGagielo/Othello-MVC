@@ -974,6 +974,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
     private void OnClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OnClick
         // TODO add your handling code here:
         JButton button = (JButton)evt.getSource();
+        this.mvcMessaging.notify("legalMoves", button.getName());
         this.mvcMessaging.notify("playerMove", button.getName());
     }//GEN-LAST:event_OnClick
 
