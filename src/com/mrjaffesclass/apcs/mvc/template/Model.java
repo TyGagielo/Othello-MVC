@@ -63,6 +63,7 @@ public class Model implements MessageHandler {
     this.whoseMove = false;
     this.gameOver = false;
   }
+  
 
   private int flipPieces(int direction, String color, String oppColor, int row, int col){
       int firstRow = row;
@@ -359,36 +360,160 @@ public class Model implements MessageHandler {
 //      this.mvcMessaging.notify("legalMoves", this);
 //  }
    
-   private boolean isLegal(String color, String oppcolor, int row, int col){
-       boolean result = false;
-       
-       if (row+1<8 && col+1<8 && board[row+1][col+1].equals(oppcolor))
-       { 
-          result=true;
-       }else if(row+1<8 && board[row+1][col].equals(oppcolor))
+  private boolean isLegal(int direction, String color, String oppcolor, int row, int col, boolean hasPassed, boolean checkOther, boolean toReturn, int count){
+      boolean returned = toReturn;
+      
+      //down/right
+      if (direction == 0 && row+1<8 && col+1<8 && board[row+1][col+1].equals(oppcolor)){
+          if (hasPassed){
+              returned = true;
+          }
+          if (checkOther){
+              return isLegal(direction, oppcolor, color, row+1, col+1, true, false, returned, count+1);
+          }
+          
+          if (board[row+1][col+1].equals(Constants.BLANK) || row+1>8 || col+1>8){
+              return isLegal(direction+1, color, oppcolor, row-count, col-count, false, false, returned, 0);
+          }
+          
+          return isLegal(direction, color, oppcolor, row+1, col+1, true, false, returned, count+1);
+      }
+      
+      direction += (!hasPassed && direction<1) ? 1:0;
+      
+      //down
+      if(direction == 1 && row+1<8 && board[row+1][col].equals(oppcolor))
        {
-         result=true;
-       }else if(col+1<8 && board[row][col+1].equals(oppcolor))
-       {
-          result=true;
-       }else if (col-1>-1 && board[row][col-1].equals(oppcolor))
-       {
-          result=true;
-       }else if (row-1>-1 && col-1>-1 && board[row-1][col-1].equals(oppcolor))
-       {
-         result=true;
-       }else if (row-1>-1 && board[row-1][col].equals(oppcolor))
-       { 
-         result=true;
-       }else if(row-1>-1 && col+1<8 && board[row-1][col+1].equals(oppcolor))
-       {
-         result=true;
-       }else if (row+1<8 && col-1>-1 && board[row+1][col-1].equals(oppcolor))
-       {
-         result = true;
+         if (hasPassed){
+              returned = true;
+          }
+          if (checkOther){
+              return isLegal(direction, oppcolor, color, row+1, col, true, false, returned, count+1);
+          }
+          
+          if (board[row+1][col].equals(Constants.BLANK) || row+1>8){
+              return isLegal(direction+1, color, oppcolor, row-count, col, false, false, returned, 0);
+          }
+          
+          return isLegal(direction, color, oppcolor, row+1, col, true, false, returned, count+1);
        }
-    return result;
-   }
+      
+      direction += (!hasPassed && direction<2) ? 1:0;
+      
+      //right
+      if(direction == 2 && col+1<8 && board[row][col+1].equals(oppcolor))
+       {
+          if (hasPassed == true){
+              returned = true;
+          }
+          if (checkOther){
+              return isLegal(direction, oppcolor, color, row, col+1, true, false, returned, count+1);
+          }
+          
+          if (board[row][col+1].equals(Constants.BLANK) || col+1<8){
+              return isLegal(direction+1, color, oppcolor, row, col-count, false, false, returned, 0);
+          }
+          
+          return isLegal(direction, color, oppcolor, row, col+1, true, false, returned, count+1);
+       }
+      
+      direction += (!hasPassed && direction<3) ? 1:0;
+      
+      //left
+      if (direction == 3 && col-1>-1 && board[row][col-1].equals(oppcolor))
+       {
+          if (hasPassed){
+              returned = true;
+          }
+          if (checkOther){
+              return isLegal(direction, oppcolor, color, row, col-1, true, false, returned, count+1);
+          }
+          
+          if (board[row][col-1].equals(Constants.BLANK) || col-1<0){
+              return isLegal(direction+1, color, oppcolor, row, col+count, false, false, returned, 0);
+          }
+          
+          return isLegal(direction, color, oppcolor, row, col-1, true, false, returned, count+1);
+       }
+      
+      direction += (!hasPassed && direction<4) ? 1:0;
+      
+      //up/left
+      if (direction == 4 && row-1>-1 && col-1>-1 && board[row-1][col-1].equals(oppcolor))
+       {
+         if (hasPassed){
+              returned = true;
+          }
+          if (checkOther){
+              return isLegal(direction, oppcolor, color, row-1, col-1, true, false, returned, count+1);
+          }
+          
+          if (board[row-1][col-1].equals(Constants.BLANK) || row-1<0 || col-1<0){
+              return isLegal(direction+1, color, oppcolor, row+count, col+count, false, false, returned, 0);
+          }
+          
+          return isLegal(direction, color, oppcolor, row-1, col-1, true, false, returned, count+1);
+       }
+      
+      direction += (!hasPassed && direction<5) ? 1:0;
+      
+      //up
+      if (direction == 5 && row-1>-1 && board[row-1][col].equals(oppcolor))
+       { 
+         if (hasPassed){
+              returned = true;
+          }
+          if (checkOther){
+              return isLegal(direction, oppcolor, color, row-1, col, true, false, returned, count+1);
+          }
+          
+          if (board[row-1][col].equals(Constants.BLANK) || row-1<0){
+              return isLegal(direction+1, color, oppcolor, row+count, col, false, false, returned, 0);
+          }
+          
+          return isLegal(direction, color, oppcolor, row-1, col, true, false, returned, count+1);
+       }
+      
+      direction += (!hasPassed && direction<6) ? 1:0;
+      
+      //up/right
+      if(direction == 6 && row-1>-1 && col+1<8 && board[row-1][col+1].equals(oppcolor))
+       {
+         if (hasPassed){
+              returned = true;
+          }
+          if (checkOther){
+              return isLegal(direction, oppcolor, color, row-1, col+1, true, false, returned, count+1);
+          }
+          
+          if (board[row-1][col+1].equals(Constants.BLANK) || row-1<0 || col+1>8){
+              return isLegal(direction+1, color, oppcolor, row+count, col-count, false, false, returned, 0);
+          }
+          
+          return isLegal(direction, color, oppcolor, row-1, col+1, true, false, returned, count+1);
+       }
+      
+      direction += (!hasPassed && direction<7) ? 1:0;
+      
+      //down/left
+      if (direction == 7 && row+1<8 && col-1>-1 && board[row+1][col-1].equals(oppcolor))
+       {
+         if (hasPassed){
+              returned = true;
+          }
+          if (checkOther){
+              return isLegal(direction, oppcolor, color, row+1, col-1, true, false, returned, count+1);
+          }
+          
+          if (board[row+1][col-1].equals(Constants.BLANK) || row+1>8 || col-1<0){
+              return isLegal(direction, color, oppcolor, row-count, col+count, false, false, returned, 0);
+          }
+          
+          return isLegal(direction, color, oppcolor, row+1, col-1, true, false, returned, count+1);
+       }
+      
+    return returned;
+  }
    
   @Override
   public void messageHandler(String messageName, Object messagePayload) {
@@ -414,14 +539,20 @@ public class Model implements MessageHandler {
       // If square is blank...
       if (this.board[row][col].equals(Constants.BLANK)) {
         // ... then set @ or O depending on whose move it is
-        if (this.whoseMove && isLegal( Constants.WHITE, Constants.BLACK, row, col)) {
+        if (this.whoseMove && isLegal(0, Constants.WHITE, Constants.BLACK, row, col, false, true, false, 0)) {
+          this.mvcMessaging.notify("gameOver", Constants.BLACK + "MOVE");
           this.board[row][col] = Constants.WHITE;
           whoseMove = !this.whoseMove;
           flipPieces(0, Constants.WHITE, Constants.BLACK, row, col);
-        } else if (!this.whoseMove && isLegal( Constants.BLACK, Constants.WHITE, row, col)) {
+        }
+        else if (!this.whoseMove && isLegal(0, Constants.BLACK, Constants.WHITE, row, col, false, true, false, 0)) {
+          this.mvcMessaging.notify("gameOver", Constants.WHITE + "MOVE");
           this.board[row][col] = Constants.BLACK;
           whoseMove = !this.whoseMove;
           flipPieces(0, Constants.BLACK, Constants.WHITE, row, col);
+        }
+        else{
+            this.mvcMessaging.notify("gameOver", "INVALID MOVE");
         }
         // Send the boardChange message along with the new board 
         this.mvcMessaging.notify("boardChange", this.board);
