@@ -160,7 +160,7 @@ public class Model implements MessageHandler {
       row = firstRow;
       col = firstCol;
       //diag down/right
-      while (direction == 4 && !shouldntFlip(direction, firstRow, firstCol)){
+      while (direction == 4){
           if (row == 7 || col == 7 || board[row+1][col+1].equals(Constants.BLANK)){
               int j = col;
               for (int i = row; i > firstRow && j > -1; i--){
@@ -185,7 +185,7 @@ public class Model implements MessageHandler {
       row = firstRow;
       col = firstCol;
       //diag down/left
-      while (direction == 5 && !shouldntFlip(direction, firstRow, firstCol)){
+      while (direction == 5){
           if (row == 7 || col == 0 || board[row+1][col-1].equals(Constants.BLANK)){
               int j = col;
               for (int i = row; i > firstRow && j < 8; i--){
@@ -210,7 +210,7 @@ public class Model implements MessageHandler {
       row = firstRow;
       col = firstCol;
       //diag up/left
-      while (direction == 6 && !shouldntFlip(direction, firstRow, firstCol)){
+      while (direction == 6){
           if (row == 0 || col == 0 || board[row-1][col-1].equals(Constants.BLANK)){
               int j = col;
               for (int i = row; i < firstRow && j < 8; i++){
@@ -235,7 +235,7 @@ public class Model implements MessageHandler {
       row = firstRow;
       col = firstCol;
       //diag up/right
-      while (direction == 7 && !shouldntFlip(direction, firstRow, firstCol)){
+      while (direction == 7){
           if (row == 0 || col == 7 || board[row-1][col+1].equals(Constants.BLANK)){
               int j = col;
               for (int i = row; i < firstRow && j > -1; i++){
