@@ -395,7 +395,7 @@ public class Model implements MessageHandler {
    // Checks a direction from x,y to see if we can make a move
     private boolean checkFlip(int row, int col, int rowdir, int coldir, String color, String oppColor){
         if (board[row][col].equals(oppColor)){
-            while ((row > 0) && (row < 8) && (col > 0) && (col < 8)){
+            while ((row+rowdir > -1) && (row+rowdir < 8) && (col+coldir > -1) && (col+coldir < 8)){
                 row += rowdir;
                 col += coldir;
                 if (board[row][col].equals(Constants.BLANK)) // not consecutive
@@ -415,9 +415,14 @@ public class Model implements MessageHandler {
                }
            }
        }
+       whoseMove = !whoseMove; this.mvcMessaging.notify("gameOver", currentColor());
        return true;
     }
    
+    private String currentColor(){
+        return (whoseMove) ? Constants.WHITE : Constants.BLACK;
+    }
+    
   @Override
   public void messageHandler(String messageName, Object messagePayload) {
       // Display the message to the console for debugging
@@ -428,7 +433,6 @@ public class Model implements MessageHandler {
     }
     
     if(messageName.equals("legalMoves")){
-//        legalLoop();
         this.mvcMessaging.notify("boardChange", this.board);
     }
     
@@ -440,21 +444,14 @@ public class Model implements MessageHandler {
       Integer col = Integer.valueOf(position.substring(1,2));
       
       // If square is blank...
-      if (this.board[row][col].equals(Constants.BLANK)) {
+      if (this.board[row][col].equals(Constants.BLANK) && !noLegal(currentColor())) {
         // ... then set @ or O depending on whose move it is
-//        if (noLegal(Constants.WHITE)){
-//            whoseMove = !whoseMove;
-//        }
         if (this.whoseMove && isLegal(row, col, Constants.WHITE)) {
           this.mvcMessaging.notify("gameOver", Constants.BLACK + "MOVE");
           this.board[row][col] = Constants.WHITE;
           whoseMove = !this.whoseMove;
           flipPieces(0, Constants.WHITE, Constants.BLACK, row, col);
         }
-        
-//        if (noLegal(Constants.BLACK)){
-//            whoseMove = !whoseMove;
-//        }
         else if (!this.whoseMove && isLegal(row, col, Constants.BLACK)) {
           this.mvcMessaging.notify("gameOver", Constants.WHITE + "MOVE");
           this.board[row][col] = Constants.BLACK;
