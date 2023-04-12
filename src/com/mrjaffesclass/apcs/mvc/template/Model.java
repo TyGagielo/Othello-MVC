@@ -160,8 +160,8 @@ public class Model implements MessageHandler {
       row = firstRow;
       col = firstCol;
       //diag down/right
-      while (direction == 4 && row < 7 && col < 7 && !shouldntFlip(direction, firstRow, firstCol)){
-          if (board[row+1][col+1].equals(Constants.BLANK)){
+      while (direction == 4 && !shouldntFlip(direction, firstRow, firstCol)){
+          if (row == 7 || col == 7 || board[row+1][col+1].equals(Constants.BLANK)){
               int j = col;
               for (int i = row; i > firstRow && j > -1; i--){
                 board[i][j] = oppColor;
@@ -185,8 +185,8 @@ public class Model implements MessageHandler {
       row = firstRow;
       col = firstCol;
       //diag down/left
-      while (direction == 5 && row < 7 && col > 0 && !shouldntFlip(direction, firstRow, firstCol)){
-          if (board[row+1][col-1].equals(Constants.BLANK)){
+      while (direction == 5 && !shouldntFlip(direction, firstRow, firstCol)){
+          if (row == 7 || col == 0 || board[row+1][col-1].equals(Constants.BLANK)){
               int j = col;
               for (int i = row; i > firstRow && j < 8; i--){
                 board[i][j] = oppColor;
@@ -210,8 +210,8 @@ public class Model implements MessageHandler {
       row = firstRow;
       col = firstCol;
       //diag up/left
-      while (direction == 6 && row > 0 && col > 0 && !shouldntFlip(direction, firstRow, firstCol)){
-          if (board[row-1][col-1].equals(Constants.BLANK)){
+      while (direction == 6 && !shouldntFlip(direction, firstRow, firstCol)){
+          if (row == 0 || col == 0 || board[row-1][col-1].equals(Constants.BLANK)){
               int j = col;
               for (int i = row; i < firstRow && j < 8; i++){
                 board[i][j] = oppColor;
@@ -235,8 +235,8 @@ public class Model implements MessageHandler {
       row = firstRow;
       col = firstCol;
       //diag up/right
-      while (direction == 7 && row > 0 && col < 7 && !shouldntFlip(direction, firstRow, firstCol)){
-          if (board[row-1][col+1].equals(Constants.BLANK)){
+      while (direction == 7 && !shouldntFlip(direction, firstRow, firstCol)){
+          if (row == 0 || col == 7 || board[row-1][col+1].equals(Constants.BLANK)){
               int j = col;
               for (int i = row; i < firstRow && j > -1; i++){
                 board[i][j] = oppColor;
@@ -244,7 +244,7 @@ public class Model implements MessageHandler {
               }
               return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
           }
-          if (board[row][col].equals(board[row-1][col+1]) ){
+          if (board[row][col].equals(board[row-1][col+1])){
               return flipPieces(direction+1, color, oppColor, firstRow, firstCol);
           } 
           if (!board[row][col].equals(board[row-1][col+1])){
@@ -390,21 +390,21 @@ public class Model implements MessageHandler {
         if (row+1<8 && col+1<8 && checkFlip(row + 1, col + 1, 1, 1, piece, opponent)){
             return true;}
         
-        return false; // If we get here, we didn't find a valid flip direction
+        return false;
     }
-   // Checks a direction from x,y to see if we can make a move
+   
     private boolean checkFlip(int row, int col, int rowdir, int coldir, String color, String oppColor){
         if (board[row][col].equals(oppColor)){
             while ((row+rowdir > -1) && (row+rowdir < 8) && (col+coldir > -1) && (col+coldir < 8)){
                 row += rowdir;
                 col += coldir;
-                if (board[row][col].equals(Constants.BLANK)) // not consecutive
+                if (board[row][col].equals(Constants.BLANK))
                     return false;
                 if (board[row][col].equals(color))
-                    return true; // At least one piece we can flip
+                    return true;
             }
         }
-        return false; // Either no consecutive opponent pieces or hit the edge
+        return false;
     }
     
     private boolean noLegal(String color){
@@ -415,7 +415,7 @@ public class Model implements MessageHandler {
                }
            }
        }
-       whoseMove = !whoseMove; this.mvcMessaging.notify("gameOver", currentColor());
+       whoseMove = !whoseMove;
        return true;
     }
    
@@ -433,6 +433,7 @@ public class Model implements MessageHandler {
     }
     
     if(messageName.equals("legalMoves")){
+//        legalLoop();
         this.mvcMessaging.notify("boardChange", this.board);
     }
     
