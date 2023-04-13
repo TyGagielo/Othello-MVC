@@ -194,12 +194,31 @@ public class Model implements MessageHandler {
       }
   }
   
+  private void countPieces(){
+      int bnum = 0, wnum = 0;
+       
+       for(String[] i : this.board){
+           for (String s : i){
+               if (s.equals(Constants.WHITE)){wnum++;}
+               if (s.equals(Constants.BLACK)){bnum++;}
+           }
+       }
+       this.mvcMessaging.notify("countWhite", wnum);
+       this.mvcMessaging.notify("countBlack", bnum);
+  }
+  
    private boolean boardFull(){
+       int bnum = 0, wnum = 0;
+       
        for(String[] i : this.board){
            for (String s : i){
                if(s.equals(Constants.BLANK)){return false;}
+               if (s.equals(Constants.WHITE)){wnum++;}
+               if (s.equals(Constants.BLACK)){bnum++;}
            }
        }
+       this.mvcMessaging.notify("countWhite", wnum);
+       this.mvcMessaging.notify("countBlack", bnum);
        return true;
    }
    private String findWinner(){
@@ -226,34 +245,34 @@ public class Model implements MessageHandler {
             opponent = Constants.BLACK;
         
         // up 
-        if (row-1>-1 && checkFlip(row - 1, col, -1, 0, piece, opponent)){
+        if (row-1>-1 && legalStep(row - 1, col, -1, 0, piece, opponent)){
             return true;}
         //down
-        if (row+1<8 && checkFlip(row + 1, col, 1, 0, piece, opponent)){
+        if (row+1<8 && legalStep(row + 1, col, 1, 0, piece, opponent)){
             return true;}
         //left
-        if (col-1>-1 && checkFlip(row, col - 1, 0, -1, piece, opponent)){
+        if (col-1>-1 && legalStep(row, col - 1, 0, -1, piece, opponent)){
             return true;}
         //right
-        if (col+1<8 && checkFlip(row, col + 1, 0, 1, piece, opponent)){
+        if (col+1<8 && legalStep(row, col + 1, 0, 1, piece, opponent)){
             return true;}
         // up-left
-        if (row-1>-1 && col-1>-1 && checkFlip(row - 1, col - 1, -1, -1, piece, opponent)){
+        if (row-1>-1 && col-1>-1 && legalStep(row - 1, col - 1, -1, -1, piece, opponent)){
             return true;}
         // down-left
-        if (row+1<8 && col-1>-1 && checkFlip(row + 1, col - 1, 1, -1, piece, opponent)){
+        if (row+1<8 && col-1>-1 && legalStep(row + 1, col - 1, 1, -1, piece, opponent)){
             return true;}
         // up-right
-        if (row-1>-1 && col+1<8 && checkFlip(row - 1, col + 1, -1, 1, piece, opponent)){
+        if (row-1>-1 && col+1<8 && legalStep(row - 1, col + 1, -1, 1, piece, opponent)){
             return true;}
         // down-right
-        if (row+1<8 && col+1<8 && checkFlip(row + 1, col + 1, 1, 1, piece, opponent)){
+        if (row+1<8 && col+1<8 && legalStep(row + 1, col + 1, 1, 1, piece, opponent)){
             return true;}
         
         return false;
     }
    
-    private boolean checkFlip(int row, int col, int rowdir, int coldir, String color, String oppColor){
+    private boolean legalStep(int row, int col, int rowdir, int coldir, String color, String oppColor){
         if (board[row][col].equals(oppColor)){
             while (inBounds(row, col, rowdir, coldir)){
                 row += rowdir;
@@ -328,6 +347,8 @@ public class Model implements MessageHandler {
         else{
             this.mvcMessaging.notify("gameOver", "INVALID MOVE");
         }
+        
+        countPieces();
         // Send the boardChange message along with the new board 
         this.mvcMessaging.notify("boardChange", this.board);
       }

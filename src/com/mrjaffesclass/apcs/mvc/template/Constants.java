@@ -13,7 +13,7 @@ package com.mrjaffesclass.apcs.mvc.template;
 public class Constants {
     // Constants
   public static final String WHITE = "O";
-  public static final String BLACK = "@";
+  public static final String BLACK = "#";
   public static final String BLANK = "--";
   public static final String LEGAL = "[]";
 }
